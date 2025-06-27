@@ -44,11 +44,29 @@
   const cards = ['card1.png', 'card2.png', 'card3.png', 'card4.png', 'card5.png', 'card6.png', 'card7.png', 'card8.png', 'card9.png' ]; // 加你所有卡片名
 
   function drawCard() {
-    const randomIndex = Math.floor(Math.random() * cards.length);
-    const selectedCard = cards[randomIndex];
+    const button = document.querySelector("button");
+    button.style.display = "none"; // 隐藏按钮
 
-    const cardContainer = document.getElementById('cardContainer');
-    cardContainer.innerHTML = '<img src="images/' + selectedCard + '" alt="Healing Card" />';
+    const cardContainer = document.getElementById("cardContainer");
+
+    // 显示 loading / 洗牌动画
+    cardContainer.innerHTML = `<p style="font-size:18px;">Shuffling...</p>`;
+
+    // 模拟 1 秒洗牌后抽卡
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * cards.length);
+      const selectedCard = cards[randomIndex];
+
+      cardContainer.innerHTML = `
+        <img id="drawnCard" src="images/${selectedCard}" alt="Healing Card" />
+      `;
+
+      // 加入动画 class
+      const img = document.getElementById('drawnCard');
+      setTimeout(() => {
+        img.classList.add('show');
+      }, 50);
+    }, 1000); // 洗牌时间
   }
 </script>
 
