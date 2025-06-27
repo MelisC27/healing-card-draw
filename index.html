@@ -122,7 +122,8 @@
 
       cardContainer.innerHTML = `
 
-        <img src="images/${selectedCard}" alt="Healing Card" />
+     const imagePath = './images/' + selectedCard;
+cardContainer.innerHTML = `<img src="${imagePath}" alt="Healing Card" />`;
 
       `;
 
