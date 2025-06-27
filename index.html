@@ -28,7 +28,7 @@
   max-width: 90%;
   height: auto;
   margin-top: 40px;
-  border-radius: 20px;
+  border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   opacity: 0;
   transform: scale(0.95);
@@ -39,6 +39,23 @@ img.show {
   opacity: 1;
   transform: scale(1);
 }
+
+
+    body {
+  background: radial-gradient(circle at 50% 30%, #fffaf4, #f6f6f6);
+  animation: pulse 5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-position: center;
+  }
+  50% {
+    background-position: 60% 40%;
+  }
+}
+
+    
   </style>
 </head>
 <body>
