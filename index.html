@@ -41,29 +41,16 @@
   <div id="cardContainer"></div>
 
   <script>
-    const cards = [
-      'card1.png’,
-      'card2.png’,
-      'card3.png,
-      'card4.png’,
-      'card5.png’,
-      'card6.png’
-      'card7.png’
-      'card8.png’
-      'card9.png’
-      // Add more if you have: 'card6.jpg', etc.
-    ];
+  const cards = ['card1.png', 'card2.png', 'card3.png', 'card4.png', 'card5.png', 'card6.png', 'card7.png', 'card8.png', 'card9.png' ]; // 加你所有卡片名
 
-    function drawCard() {
-      const randomIndex = Math.floor(Math.random() * cards.length);
-      const selectedCard = cards[randomIndex];
+  function drawCard() {
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    const selectedCard = cards[randomIndex];
 
-      const cardContainer = document.getElementById('cardContainer');
-      cardContainer.innerHTML = `
-        <img src="images/${selectedCard}" alt="Healing Card" />
-      `;
-    }
-  </script>
+    const cardContainer = document.getElementById('cardContainer');
+    cardContainer.innerHTML = '<img src="images/' + selectedCard + '" alt="Healing Card" />';
+  }
+</script>
 
 </body>
 </html>
