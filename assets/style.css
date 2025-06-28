@@ -29,6 +29,7 @@ button {
   margin-top: 20px;
 }
 
+
 img.logo {
   max-height: 80px;
   margin-bottom: 20px;
@@ -162,6 +163,28 @@ img.show {
   animation-delay: -28s;
   transform-origin: 25vw -3vh;
   box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
+}
+
+
+.sparkle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.sparkle-wrapper .sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkleAnim 2s infinite ease-in-out;
+  box-shadow: 0 0 4px white;
+}
+
+@keyframes sparkleAnim {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 
 
