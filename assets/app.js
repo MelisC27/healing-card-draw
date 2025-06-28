@@ -19,6 +19,16 @@ function drawCard() {
     cardContainer.innerHTML = `
       <img id="drawnCard" src="images/${selectedCard}" alt="Healing Card" class="card" />
     `;
+cardContainer.innerHTML = `
+  <div class="sparkle-wrapper">
+    <img id="drawnCard" src="images/${selectedCard}" alt="Healing Card" class="card" />
+    <div class="sparkle" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
+    <div class="sparkle" style="top: 40%; left: 65%; animation-delay: 0.3s;"></div>
+    <div class="sparkle" style="top: 70%; left: 30%; animation-delay: 0.6s;"></div>
+    <div class="sparkle" style="top: 25%; left: 75%; animation-delay: 1s;"></div>
+  </div>
+`;
+
 
     const img = document.getElementById('drawnCard');
     setTimeout(() => {
